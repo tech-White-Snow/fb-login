@@ -38,18 +38,19 @@ const Login = () => {
     <>
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <GoogleLogin
-          clientId={clientId}
-          buttonText="Sign In"
+          clientId="843774698876-qrhnm1nrlknmserv2hv1eg38fmspflbc.apps.googleusercontent.com"
+          buttonText=""
           onSuccess={onLoginSuccess}
           onFailure={onLoginFailure}
           cookiePolicy={"single_host_origin"}
-          isSignedIn={true}
+          isSignedIn={false}
         />
         <FacebookLogin
-          appId={facebookId}
+          appId="2132531396948980"
           fields="name,email,picture"
           onClick={componentClicked}
           callback={responseFacebook}
+          autoLoad={false}
         />
       </div>
     </>
